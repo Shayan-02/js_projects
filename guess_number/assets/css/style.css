@@ -1,0 +1,153 @@
+@font-face {
+  font-family: Vazir;
+  src: url(./../fonts/VAZIR.TTF);
+}
+
+body {
+  font-family: Vazir;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 450px;
+  position: fixed;
+
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #1e3c72;
+  font-weight: 700;
+  margin: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin: 20px 0;
+  color: #2a5298;
+  font-weight: 700;
+}
+
+input[type="number"] {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #2a5298;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #f39c12;
+  box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+  outline: none;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 10px 18px;
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: translateY(3px);
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.5);
+}
+
+#attemptsLeft {
+  color: #e74c3c;
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.icon {
+  margin: 12px;
+  color: #f3124a;
+}
+
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 3s infinite ease-in-out;
+}
+
+.shape:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 15%;
+}
+.shape:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  left: 70%;
+}
+.shape:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  top: 80%;
+  left: 30%;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
